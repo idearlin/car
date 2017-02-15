@@ -1,88 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-	<script type="text/javascript" src="fastclick.js"></script>
-	<style type="text/css">
-		*{
-			margin: 0;
-			padding: 0;
-		}
-		body，htnl{
-			width: 100%;
-			height: 100%;
-		}
-		#wrap{
-			width: 50px;
-			height: 110px;
-			margin: 0 auto;
-			text-align: center;
-		}
-		input{
-			width: 50px;
-			height: 80px;
-			background-color: gray;
-			display: inline-block;
-			border: none;
-		}
-		a{
-			width: 50px;
-			height: 30px;
-			background-color: blue;
-			display: inline-block;
-			color: white;
-		}
-		#mask{
-			width: 100%;
-			height: 100%;
-			display: none;
-			background-color: gray;
-			opacity: 0.5;
-			position: absolute;
-			left: 0;
-			top: 0;
-		}
-
-	</style>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    html,
+    body,
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    img{
+        width: 100%;
+    }
+    .s1 {
+        background: url('img/bg1.png') 0 0 no-repeat;
+        background-size: cover;
+    }
+    .s2 {
+        background: url('img/bg2.jpg') 0 0 no-repeat;
+        background-size: cover;
+    }
+    .s3 {
+        background: url('img/bg3.jpg') 0 0 no-repeat;
+        background-size: cover;
+    }
+    .s4 {
+        background: url('img/bg4.jpg') 0 0 no-repeat;
+        background-size: cover;
+    }
+    .s5 {
+        background: url('img/bg5.png') 0 0 no-repeat;
+        background-size: cover;
+    }
+    #bg11{
+        width: 80%;
+        height: 80%;
+        position: absolute;
+        left: 5%;
+        top: 18%;
+        background: url('img/bg11.png') 0 0 no-repeat;
+        background-size: contain;
+    }
+    #p1{
+        position: absolute;
+        left: 0;
+        top: 38%;
+        color: gray;
+        font-size: 16px;
+        font-style: italic;
+        font-weight: bold;
+    }
+    #car{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 68%;
+        background: url('img/car.png') 0 0 no-repeat;
+        background-size: contain;
+    }
+    #bg21{
+        width: 80%;
+        height: 80%;
+        position: absolute;
+        left: 0;
+        top: 15%;
+        background: url('img/bg21.png') 0 0 no-repeat;
+        background-size: contain;
+    }
+    #p2{
+        position: absolute;
+        left: 0;
+        top: 36%;
+        color: gray;
+        font-size: 16px;
+        font-style: italic;
+    }
+    #p2 span{
+        font-size: 20px;
+        color: orange;
+    }
+    #car2{
+        width: 80%;
+        height: 80%;
+        position: absolute;
+        right: 0;
+        top: 68%;
+        background: url('img/car2.png') 0 0 no-repeat;
+        background-size: contain;
+    }
+    #bg31{
+        width: 80%;
+        height: 20%;
+        position: absolute;
+        right: 0;
+        top: 8%;
+        background: url('img/bg31.png') 0 0 no-repeat;
+        background-size: contain;
+    }
+    #p3{
+        position: absolute;
+        right: 0;
+        top: 27%;
+        color: gray;
+        font-size: 16px;
+        font-style: italic;
+        text-align: right;
+    }
+    #p3 span{
+        font-size: 20px;
+        color: orange;
+    }
+    #fa{
+        width: 50%;
+        height: 35%;
+        position: absolute;
+        left: 0;
+        bottom:2%;
+        background: url('img/fa.png') 0 0 no-repeat;
+        background-size: contain;
+    }
+    #bg41{
+        width: 80%;
+        height: 80%;
+        position: absolute;
+        left: 0;
+        top: 7%;
+        background: url('img/bg41.jpg') 0 0 no-repeat;
+        background-size: contain;
+    }
+    #p4{
+        position: absolute;
+        left: 0;
+        top: 25%;
+        color: gray;
+        font-size: 16px;
+        font-style: italic;
+    }
+    #p4 span{
+        font-size: 20px;
+        color: orange;
+    }
+    #bg4_1{
+        width: 35%;
+        height: 15%;
+        position: absolute;
+        right: 5%;
+        bottom: 7%;
+        background: url('img/bg4_1.png') 0 0 no-repeat;
+        background-size: contain;
+    }
+    #bg4_2{
+        width: 45%;
+        height: 20%;
+        position: absolute;
+        left: 5%;
+        bottom: 20%;
+        background: url('img/bg4_2.png') 0 0 no-repeat;
+        background-size: contain;
+    }
+    #bg51{
+        width: 90%;
+        height: 20%;
+        position: absolute;
+        left: 5%;
+        top: 20%;
+        background: url('img/bg51.png') 0 0 no-repeat;
+        background-size: contain;
+    }
+    #button{
+        width: 50%;
+        height: 10%;
+        position: absolute;
+        right: 0;
+        top: 40%;
+        background: url('img/button.png') 0 0 no-repeat;
+        background-size: contain;
+    }
+    #car5{
+        width: 90%;
+        height: 80%;
+        position: absolute;
+        right: 0;
+        top: 68%;
+        background: url('img/car5.png') 0 0 no-repeat;
+        background-size: contain;
+    }
+    </style>
 </head>
+
 <body>
-	<div id="mask"></div>
-	<div id="wrap">
-		<input type="button" value="遮罩" id="button">
-		<a href="http:www.baidu.com/">百度</a>
-	</div>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide s1">
+                <img src="img/logo.png" alt="">
+                <div id="bg11" class="ani" swiper-animate-effect="swing" swiper-animate-duration="2s" swiper-animate-delay="0.3s"></div>
+                <p id="p1" class="ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="2s" swiper-animate-delay="0.3s">剑拔弩张的对峙，更是英雄相惜的跃跃欲试。<br>驭见高尔夫R-Line，遇见另一个自己</p>
+                <div id="car" class="ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="2s" swiper-animate-delay="0.3s"></div>
+            </div>
+            <div class="swiper-slide s2">
+                <img src="img/logo.png" alt="">
+                <div id="bg21" class="ani" swiper-animate-effect="bounceInDown" swiper-animate-duration="2s" swiper-animate-delay="0.1s"></div>
+                <p id="p2" class="ani" swiper-animate-effect="zoomInLeft" swiper-animate-duration="2s" swiper-animate-delay="0.3s">设计动感入微，静观已澎湃。<br>锋芒展露的前大灯与犀利尾翼首尾呼应，<br>匹配你的运动气质：<br>有如为你度身定制的福特<br><span>R-Line标识，</span><br>是你不甘于常规的鲜明印记，<br>更配备精致<span>17寸铝轮毂，</span><br>与你一同丈量世界！</p>
+                <div id="car2" class="ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="2s" swiper-animate-delay="0.1s"></div>
+            </div>
+            <div class="swiper-slide s3">
+                <img src="img/logo.png" alt="">
+                <div id="bg31" class="ani" swiper-animate-effect="rotateInDownRight" swiper-animate-duration="1s" swiper-animate-delay="0.1s"></div>
+                <p id="p3" class="ani" swiper-animate-effect="rotateInDownLeft" swiper-animate-duration="1s" swiper-animate-delay="0.1s">动感要放肆，而环保要克制。<br>搭载<span>1.4TSI</span>发动机带来的淋漓快感，<br>满足你释放身心的渴望：<br>配合<span>手自一体DSG</span>双离合自动变速器，<br>领先科技更让动力与节能收放自如：<br>多功能运动方向盘，更多选择触发无限可能。</p>
+                <div id="fa" class="ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="2s" swiper-animate-delay="0.3s"></div>
+            </div>
+            <div class="swiper-slide s4">
+                <img src="img/logo.png" alt="">
+                <div id="bg41" class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0.1s"></div>
+                <p id="p4" class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="1s" swiper-animate-delay="0.1s">品味不拘于形式美学，<br>更将感官体验全面深化，<br><span>全新酷热内饰</span>，运动风范一展无余：<br><span>双色电加热座椅</span>，真皮质感匹配创新科技，<br>养眼更暖心：每一细微之处，<br>皆是视觉与触感的双重满足，<br>面面俱到的享受。</p>
+                <div id="bg4_1" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="1.8s"></div>
+                <div id="bg4_2" class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="1.2s"></div>
+            </div>
+            <div class="swiper-slide s5">
+                <img src="img/logo.png" alt="">
+                <div id="bg51" class="ani" swiper-animate-effect="wobble" swiper-animate-duration="1s" swiper-animate-delay="0.2s"></div>
+                <div id="button" class="ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="0.2s"></div>
+                <div id="car5" class="ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="0.2s"></div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+    <script type="text/javascript" src="js/swiper.animate1.0.2.min.js"></script>
+    <script type="text/javascript">
+    var mySwiper = new Swiper('.swiper-container', {
+        //方向：垂直
+        direction: 'vertical',
+        onInit: function(swiper) { //Swiper2.x的初始化是onFirstInit
+            swiperAnimateCache(swiper); //隐藏动画元素 
+            swiperAnimate(swiper); //初始化完成开始动画
+        },
+        onSlideChangeEnd: function(swiper) {
+            swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+        }
+    })
+    </script>
 </body>
-<script type="text/javascript">
-	//注意
 
-
-
-	var mask = document.getElementById("mask");
-	var btn = document.getElementsByTagName('input')[0];
-
-	if ('addEventListener' in document) {
-    document.addEventListener('DOMContentLoaded', function() {
-        FastClick.attach(document.body);
-    }, false);
-}
-	// btn.onclick=function(){
-	// 	mask.style.display="block";
-	// }
-	// mask.onclick=function(){
-	// 	this.style.display="none";
-	// }
-
-	//触屏事件
-	//touchstart
-	//点透问题
-	btn.addEventListener("touchstart", function(){
-		mask.style.display="block";
-	},false);
-	mask.addEventListener("touchstart", function(){
-		mask.style.display="none";
-		// FastClick.attach(document.body);
-	},false);
-</script>
 </html>
